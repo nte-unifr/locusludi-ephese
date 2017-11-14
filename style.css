@@ -151,3 +151,6 @@ img.fluid {
 #simplemodal-overlay {
 	background-color: #000000;
 }
+#simplemodal-container {
+	top: 0 !important;
+}
