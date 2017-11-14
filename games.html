@@ -1,0 +1,175 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>Veni Vidique Ludique – Jouer à Éphèse</title>
+	
+    <link rel="stylesheet" href="style.css" />
+    
+	<script src="js/jquery.1.9.1.min.js"></script>
+	<script src="js/jquery.simplemodal.js"></script>
+	
+	<script>
+		$(function() {
+			$.modal.defaults.closeClass = "close";
+			
+			function showModal(event, attribute) {
+				var game = attribute.attr('game');
+				var caption = attribute.attr('caption');
+				var image = (attribute.attr('image') != null ? attribute.attr('image') : 'clear.png');
+			
+				var modalDiv = document.getElementById(game);
+				$('#' + game + ' img.game-image').attr('src', 'images/games/' + image);
+				$('#' + game + ' p.caption').html(caption);
+				$.modal(modalDiv, { opacity : 50, closeHTML : 'close' });
+			}
+			
+			$('#map-games area').click(function (event) {
+				showModal(event, $(this));
+				
+				return false;
+			});
+			
+			$('#list-games a').click(function (event) {
+				showModal(event, $(this));
+				
+				return false;
+			});
+		});
+	</script>
+</head>
+<body id="games">
+	<div id="wrapper">
+	
+		<div><a href="index.html"><div id="home-button"></div></a></div>
+
+		<h1>Jouer à Éphèse</h1>
+		
+		<div id="map">
+			<p class="legend">Touchez une zone de la carte ou le nom d'un jeu pour obtenir des informations</p>
+			
+			<img src="images/map-games.jpg" alt="Carte des jeux" usemap="#map-games" />
+			
+			<map id="map-games" name="map-games">
+				<area shape="circle" alt="" title="" coords="383,392,34" href="" game="game-marelle" image="DSC_0090.jpg" caption="Rue de Marbre, portique" /><!-- 1 -->
+				<area shape="circle" alt="" title="" coords="209,350,22" href="" game="game-12_lignes" image="DSC_0258.jpg" caption="Rue Arkadiane, au milieu de la rue, en face d’une porte d’entrée" /><!-- 2 -->
+				<area shape="circle" alt="" title="" coords="246,381,22" href="" game="game-5_lignes" image="DSC_0281.jpg" caption="Rue Arkadiane, devant le portique" /><!-- 3 -->
+				<area shape="circle" alt="" title="" coords="281,410,22" href="" game="game-5_lignes" image="2x5Ephesus.jpg" caption="Rue Arkadiane" /><!-- 4 -->
+				<area shape="circle" alt="" title="" coords="209,569,22" href="" game="game-billes" image="DSC_0012_Androklos_Murmeln.jpg" caption="Rue des Courètes, monument honorifique d’Androclos" /><!-- 5 -->
+				<area shape="circle" alt="" title="" coords="257,581,24" href="" game="game-11_lignes" image="DSC_0022_2x11.jpg" caption="Rue des courètes, portique" /><!-- 6 -->
+				<area shape="circle" alt="" title="" coords="205,618,24" href="" game="game-alea" image="254.jpg" caption="Rue des Courètes, maison privée, atrium" /><!-- 7 -->
+				<area shape="circle" alt="" title="" coords="250,627,21" href="" game="game-5_lignes" image="DSC_0046.jpg" caption="Rue des Courètes, portique" /><!-- 8 -->
+				<area shape="circle" alt="" title="" coords="264,664,22" href="" game="game-12_lignes" image="Embolos_Aqs_verdeckt.jpg" caption="Rue des Courètes, dans le portique" /><!-- 9 -->
+				<area shape="circle" alt="" title="" coords="278,703,22" href="" game="game-alea" image="Embolos_Nord_Aks_1.jpg" caption="Rue des Courètes, dans le portique" /><!-- 10 -->
+				<area shape="circle" alt="" title="" coords="275,748,22" href="" game="game-alea" image="DSC_0140_Staats_A.jpg" caption="Agora" /><!-- 11 -->
+				<area shape="circle" alt="" title="" coords="249,783,22" href="" game="game-12_lignes" image="DSC_0147.jpg" caption="Route sud, portique, à côté du nymphée de Lucanius Bassus" /><!-- 12 -->
+			</map>
+		</div>
+		
+		<div id="list-games">
+			<table>
+				<tr>
+					<td><span class="disk color-5_lignes"></span> <a href="" game="game-5_lignes">Le jeu des 5 lignes</a></td>
+					<td><span class="disk color-11_lignes"></span><a href="" game="game-11_lignes">Le jeu des onze lignes</a></td>
+					<td><span class="disk color-marelle"></span><a href="" game="game-marelle">La petite marelle</a></td>
+				</tr>
+				<tr>
+					<td><span class="disk color-12_lignes"></span><a href="" game="game-12_lignes">Le jeu des douze lignes</a></td>
+					<td><span class="disk color-alea"></span><a href="" game="game-alea">L’Alea</a></td>
+					<td><span class="disk color-billes"></span><a href="" game="game-billes">La piste de billes</a></td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- GAMES -->
+		<div id="game-5_lignes" class="game modal">
+			<div class="close">Fermer</div>
+			
+			<h3>Le jeu des 5 lignes <i>(pente grammai)</i></h3>
+			
+			<p>Ce jeu est déjà connu en Grèce antique dès la fin du VIIe siècle av. J.-C. Le plateau se compose de 5 lignes parallèles. La ligne médiane est appelée <em>ligne sacrée</em>, comme le décrit Julius Pollux (IIe s. apr. J.-C.) dans son dictionnaire:
+			<blockquote>Chaque joueur a 5 pièces sur 5 lignes. Sur les 5 lignes de chaque côté, celle du milieu est appelée ligne sacrée. Le fait de devoir déplacer une pièce arrivée sur cette ligne a donné naissance à l’expression <em>il déplace la pièce de la ligne sacrée</em>.</blockquote></p>
+			<p>Le plateau peut aussi comporter deux rangées parallèles de cinq cases : les deux cases centrales représentent la <em>ligne sacrée</em>.</p>
+			<p>On joue à deux. Les joueurs sont assis devant les longs côtés du plateau de jeu. Chaque joueur a autant de pions que de lignes sur le plateau, c’est-à-dire 5. Chacun lance à tour de rôle un dé et déplace ses pions de case en case selon le résultat obtenu. Le but est de rassembler ses 5 pions sur les cases du milieu qui forment <em>la ligne sacrée</em>.</p>
+			
+			<img src="images/game-5lignes.png" alt="Le jeu des 5 lignes" /><br />
+			
+			<img src="" alt="" class="game-image" />
+			
+			<p class="caption"></p>
+		</div>
+		
+		<div id="game-11_lignes" class="game modal">
+			<div class="close">Fermer</div>
+			
+			<h3>Le jeu des onze lignes</h3>
+			
+			<p>Dans plusieurs villes d’Asie Mineure, Ephèse, Smyrne et Aphrodisias, un grand nombre de plateaux de jeu comportaient deux rangées de onze cases. Ce jeu est probablement une variante d’époque romaine agrandie du jeu des cinq lignes. La ligne médiane devait correspondre à la <em>ligne sacrée</em>.</p>
+		
+			<p>On joue à deux. Chaque joueur a autant de pions que de lignes sur le plateau, c’est-à-dire 11. Chacun lance à tour de rôle un dé et déplace ses pions de case en case selon le résultat obtenu. Le but est de rassembler ses 11 pions sur les cases du milieu qui forment « la ligne sacrée ».</p>
+		
+			<img src="" alt="" class="game-image" />
+			
+			<p class="caption"></p>
+		</div>
+		
+		<div id="game-12_lignes" class="game modal">
+			<div class="close">Fermer</div>
+			
+			<h3>Le jeu des douze lignes <i>(ludus duodecim scripta)</i></h3>
+			
+			<p>Ce jeu romain très populaire appartient à la famille du backgammon et du trictrac. Il apparaît au plus tard au IIe s. av. J.-C. Le plateau se compose de trois rangées de 12 cases.
+Les règles précises sont inconnues. On joue à deux. Les joueurs ont chacun 15 pions et lancent à tour de rôle deux dés. Ils introduisent leurs pions sur le plateau dans la même rangée de cases selon le résultat obtenu.</p>
+			<p>Les pions font le tour du plateau et en ressortent. Deux pions ou plus sur une même case bloquent celle-ci et ne peuvent pas être mangés. Un pion capturé sur une case doit être réintroduit avant de continuer.</p>
+			<p>Certains plateaux de jeu montrent que la rangée du milieu avait une fonction particulière. Nous proposons d’y voir l’endroit pour « parquer » les pions capturés.</p>
+
+			<img src="" alt="" class="game-image" />
+			
+			<p class="caption"></p>
+		</div>
+		
+		<div id="game-alea" class="game modal">
+			<div class="close">Fermer</div>
+			
+			<h3>L'Alea</h3>
+			
+			<p>L’Alea est une variante du jeu des douze lignes (<i>duodecim scripta</i>). Ce jeu apparaît dès le IIIe siècle apr. J.-C. Comme le duodecim scripta, il se compose de trois rangées de 12 cases, mais il se distingue par l’emploi de 3 dés au lieu de 2, comme l’explique Isidore de Séville (VIIe s.), ce qui explique son changement de nom en Alea (« dés »)</p>
+			
+			<img src="" alt="" class="game-image" />
+			
+			<p class="caption"></p>
+		</div>
+		
+		<div id="game-marelle" class="game modal">
+			<div class="close">Fermer</div>
+			
+			<h3>La petite marelle</h3>
+			
+			<p>La petite marelle (nom latin inconnu) consiste en un carré traversé par deux lignes, verticalement et horizontalement (variante A) ou en diagonale (variante B). 
+Chaque joueur possède 3 pions et les place à tour de rôle sur l’un des 9 points d’intersection des lignes. Une fois les trois pions placés, on les déplace le long des lignes d’un point à un point voisin. Le but du jeu est d’aligner 3 pions (faire « trois en ligne »).</p>
+			<p>Ovide (43 av. J.-C./18 apr. J.-C.) décrit ce jeu dans l’<em>Art d’aimer III 365-366</em>: « un petit plateau sur lequel sont placés trois pions en pierre, le gagnant est celui qui a aligné les siens ».</p>
+			
+			<img src="images/game-marelle.png" alt="La petite marelle" /><br />
+			
+			<img src="" alt="" class="game-image" />
+			
+			<p class="caption"></p>
+		</div>
+		
+		<div id="game-billes" class="game modal">
+			<div class="close">Fermer</div>
+			
+			<h3>La piste de billes</h3>
+			
+			<p>De nombreuses pistes de billes sont visibles dans les villes romaines. Leur nom n’est pas conservé, et aucune règle n’est connue, mais il existait probablement beaucoup de variantes.</p>
+			<p>Deux lignes parallèles marquent le départ du lancer. Le but est d’atteindre le trou d’arrivée au bout de la piste en évitant les trous intermédiaires. 
+Une variante : capturer les billes des autres joueurs en faisant glisser sa bille dans un trou contenant déjà une ou plusieurs billes.</p>
+			
+			<img src="" alt="" class="game-image" />
+			
+			<p class="caption"></p>
+		</div>
+		<!-- /GAMES -->
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/*@font-face {
+  font-family: 'Trajan';
+  src: url('fonts/Trajan-Regular.ttf')  format('truetype')
+}*/
+
+@font-face {
+	font-family: 'Cinzel';
+	src: url('fonts/Cinzel-Regular.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+body {
+	background: #FFFFFF url('images/mosaic.png') top repeat-x;
+	color: #010101;
+	text-align: center;
+	font-family: 'Helvetica', 'Arial';
+	/*font-size: 2em;*/
+}
+h1 {
+	color: #EB6D3D;
+	font-family: 'Cinzel', 'Helvetica', 'Arial';
+	font-size: 2em;
+	margin: 50px 0 50px 0;
+}
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	color: #EB6D3D;
+	font-family: 'Cinzel', 'Helvetica', 'Arial';
+	font-size: 1.2em;
+}
+p {
+}
+a, a:hover, a:active {
+	text-decoration: none;
+	color: #EB6D3D;
+}
+img {
+	border: 1px solid #000000;
+}
+img.fluid {
+	max-width: 100%;
+	height: auto;
+}
+#wrapper {
+	/*width: 1024px;*/
+	margin: 140px auto;
+	position: relative;
+}
+#home-button {
+	position: absolute;
+	top: 15px;
+	left: 40px;
+	background: url('images/button-home.png') no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.clear {
+	clear: both;
+}
+.modal {
+	position: relative;
+	display: none;
+	background: #FFFFFF;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #EB6D3D;
+}
+.modal .close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	color: #EB6D3D;
+	cursor: hand;
+}
+.legend {
+	font-style: italic;
+}
+.game img {
+	border: none;
+}
+.game .game-image {
+	max-height: 400px;
+}
+#home h2 {
+	margin-top: 40px;
+}
+#home #copyright {
+	float: left;
+	z-index: 100;
+	font-size: 11px;
+	color: #EB6D3D;
+	margin-top: 10px;
+}
+#home #copyright img {
+	border: none;
+}
+#home #lang {
+	float: right;
+	z-index: 100;
+	margin-top: 20px;
+}
+#home #lang img {
+	width: 40px;
+	height: 40px;
+	border: none;
+}
+#games #list-games {
+	margin: auto;
+	margin-top: 20px;
+	width: 1000px;
+	border: 1px solid #EB6D3D;
+}
+#games #list-games table {
+	width: 100%;
+}
+#games #list-games table tr td {
+	padding: 8px;
+	width: 18%;
+}
+#games .disk {
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+	display: inline-block;
+	margin-right: 6px;
+}
+#games .color-5_lignes {
+	background-color: #009051;
+}
+#games .color-11_lignes {
+	background-color: #fffb00;
+}
+#games .color-marelle {
+	background-color: #0433ff;
+}
+#games .color-12_lignes {
+	background-color: #db282f;
+}
+#games .color-alea {
+	background-color: #db282f;
+}
+#games .color-billes {
+	background-color: #000000;
+}
+#games .caption {
+}
+
+/* Simple Modal */
+#simplemodal-overlay {
+	background-color: #000000;
+}
